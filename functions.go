@@ -45,7 +45,7 @@ func getSliceAttribute(idptr *C.int, name *C.char, phone *C.char){
 
 //export AppendSlice
 func AppendSlice(iptr C.int,str2 *C.char,str3 *C.char){
-   tmp := TestItem{iptr,C.GoStringN(str2, 6),C.GoStringN(str3, 6)}
+   tmp := TestItem{int(iptr),C.GoStringN(str2, 6),C.GoStringN(str3, 6)}
    slicetestStrings = append(slicetestStrings,tmp)
 }
 
